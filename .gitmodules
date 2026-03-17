@@ -1,0 +1,3 @@
+[submodule "latex-basics"]
+	path = latex-basics
+	url = https://github.com/ZHAW-summaries-IT-ET/latex-basics.git
