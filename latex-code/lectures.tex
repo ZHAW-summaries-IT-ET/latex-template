@@ -1,0 +1,37 @@
+\documentclass[a4paper, fontsize = 8pt, landscape]{scrartcl}
+\usepackage{../latex-basics/layout_and_colours}
+
+\makeatletter
+\def\input@path{{content/}{content/lectures/}{content/examples/}}
+\makeatother
+\graphicspath{{images/}{content/images/}{content/lectures/images/}{content/examples/images/}}
+
+\title{Course Name}
+\subtitle{Lecture contents}
+\author{Jil Zerndt}
+\date{current semester}
+
+\createtitlepagestyle
+\createmainpagestyle
+\begin{document}
+\begin{multicols}{2}
+	\thispagestyle{TitlePageStyle}
+    % title without logo:
+    % \maketitleinfo
+
+    % title with logo:
+    \begin{minipage}{0.05\linewidth}
+        \includegraphics[width=\linewidth]{zhaw-logo.png}
+    \end{minipage}
+    \begin{minipage}{0.94\linewidth}
+        \maketitleinfo
+    \end{minipage}
+    
+	\sffamily
+	\input{00_overview.tex}
+    \raggedcolumns
+	% \pagebreak
+	\input{00_intro.tex}
+    \raggedcolumns
+\end{multicols}
+\end{document}
